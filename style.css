@@ -18,6 +18,10 @@
         --text-color--: white;
         --primary-color: #0882fc;
     }
+
+    .profile-img {
+        filter: invert(1);
+    }
 }
 
 .separator {
@@ -79,12 +83,11 @@ html{
 }
 
 .content-wrapper {
-    margin-top: 3vh;
     display: flex;
     flex-direction: column; 
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 5vh;
     width: 100%;
     flex-wrap: wrap;
 }
@@ -93,6 +96,9 @@ html{
     width: clamp(300px, 20vh, 400px);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    user-select: none;
 }
 
 .text-group {
@@ -104,46 +110,6 @@ html{
     justify-content: center;
 }
 
-.info-tambahan {
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    background-color: var(--bg-color--);
-    flex-direction: column;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0px;       
-    margin-top: 50px;
-}
-
-.minat-info {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    flex: 1;     
-    background-color: aqua;
-    padding: 20px;
-}
-
-.baris {
-    margin-bottom: 15px;
-    background-color: red;
-    display: flex;
-    padding: 10px 10px 10px 10px;
-    flex-direction: row;
-    gap: 90vh;
-    align-items: flex-end;
-}
-
-.bagian {
-    padding: 20px 20px 20px 20px;
-    background-color: yellow;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
 .hi {
     color: var(--text-color--);
@@ -154,11 +120,6 @@ html{
 
 .desc {
     color: var(--text-color--);
-    font-size: 3vh;
-    margin: 0;
-}
-
-.head-hobbies {
     font-size: 3vh;
     margin: 0;
 }
@@ -178,58 +139,6 @@ html{
     scroll-margin-top: 10vh;
 }
 
-#projects{
-    scroll-margin-top: 10vh;
-}
-
-.kotak-project {
-    width: 100%;
-    background-color: var(--bg-color--);
-    border-radius: 1pc;
-    min-height: 50vh;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 30px;
-    align-items: center;
-    justify-content: center;
-}
-
-.judul-section {
-    margin-top: 60px;
-    color: var(--text-color--);
-    font-size: 5vh;
-    font-weight: 800;
-    padding-left: 20px;
-    text-align: end;
-}
-
-.project-card {
-    flex: auto;
-    box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
-    padding: 0px 30px 30px 30px;
-    margin-bottom: 10px;
-    display: flex;
-    gap: 30px;
-    background: var(--bg-color-secondary--);
-    border-radius: 20px;
-    min-width: 250px;
-    flex-wrap: wrap;
-    transition: 0.3s;
-}
-
-.project-card:hover {
-    transform: scale(1.04);
-}
-
-.project-info {
-    color: var(--text-color--);
-    flex: 1;
-    min-width: 300px;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
 .link {
     color: black;
     transition: 0.3s;
@@ -246,14 +155,6 @@ html{
     line-height: 1.6;
 }
 
-.tech-stack span {
-    background: #333;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 50px;
-    font-size: 14px;
-    margin-right: 0px;
-}
 
 .tombol{
     background-color: #222;
@@ -273,19 +174,6 @@ html{
 }
 
 @media (max-width: 600px) {
-    .project-card {
-    flex: 1 1 300px;
-    box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
-    padding: 25px;
-    margin-bottom: 20px;
-    display: flex;
-    gap: 20px;
-    border-radius: 20px;
-    min-width: 0;     
-    width: 100%;       
-    overflow: hidden;
-    transition: 0.3s;
-    }
 
     .navbar {
         transform: translate(-25px);
@@ -296,13 +184,7 @@ html{
     }
 
     .desc {
-        font-size: 3vh;
-    }
-
-    .project-info {
-        flex: 1;
-        min-width: 0; 
-        width: 100%;
+        font-size: 2vh;
     }
 
     .content-wrapper {
@@ -357,58 +239,17 @@ html{
     color: var(--text-color--);
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 11px;
     align-items: center;
     justify-content: center;
 }
 
 .contact a{
-    font-size: 40px;
+    font-size: 30px;
     color: var(--text-color--);
     transition: 0.3s;
 }
 
 .contact a:hover{
     transform: scale(1.10);
-}
-
-.techstack-portofolio {
-    background: #f0f0f0;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-
-    height: auto;
-    min-height: 30vh;
-    width: 100%;
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 100px;
-}
-
-.techstack-portofolio hr {
-    color: black;
-    border-top: 10px;
-}
-
-.techstack-portofolio span{
-    font-size: 40px;
-}
-
-.about-badge {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
-
-.about-badge span {
-    transition: 0.3s;
-    font-size: 30px;
-}
-
-.about-badge span:hover{
-    transform: scale(1.05);
 }
