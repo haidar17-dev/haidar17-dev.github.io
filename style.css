@@ -5,7 +5,7 @@
 :root {
     --bg-color--: #f7f7f7;
     --bg-color-secondary--: #ffffff;
-    --text-color--: black;
+    --text-color--: #09141e;
     --primary-color: #0882fc;
 }
 
@@ -13,7 +13,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-color--: #242424;
+        --bg-color--: #09141e;
         --bg-color-secondary--: #484848;
         --text-color--: white;
         --primary-color: #0882fc;
