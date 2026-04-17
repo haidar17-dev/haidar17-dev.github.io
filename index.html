@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haidar - Student, Tech Enthusiast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="images/logo1.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body data-aos="fade-up" data-aos-delay="200">
+<body>
     <nav class="navbar">
         <ul class="menu">
             <li><a href="#about">About</a></li>
@@ -20,17 +21,13 @@
     </nav>
     <div class="kotak" id="about">
         <div class="content-wrapper">
-            <img src="images/profile1.png" class="profile-img">
-            
-            <div class="text-group">
-                <h2 class="hi"><span style="font-weight: 800;">Hello Everyone👋</h2><br>
-                <p class="desc">I'm <span style="font-weight: 800;">Haidar</span>. I'm a high school student <br> who is passionate about computer science.<br><br>
-                <p class="desc">I usually spend my time playing or listening to music, <br> exploring IoT and web development, and reading some books...</p>
-            </div>
+            <h2 class="hi"><span style="font-weight: 800;">Hello Everyone 👋</h2><br>
+            <p class="desc">I'm <span style="font-weight: 800;">Haidar</span>. <br> I'm a high school student <br> who is passionate about computer science.<br><br>
+            <p class="desc">I usually spend my time playing or listening to music, <br> exploring IoT and web development, and reading some books...</p>
         </div>
         <h2 class="my-books" id="books">MY FAVORITE BOOKS</h2>
-        <div class="info-tambahan">
-            <div class="kartu-info">
+        <div class="info-tambahan" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
             
                 <h3 class="judul-buku">Hari Gini <br> Masih Galau?!</h3>
                 <img class="book-cover" src="images/buku_galau.jpg" alt="">
@@ -39,8 +36,8 @@
                     In this book, I learned some life lessons that helped me become a better person. It taught me to always have faith and accept whatever fate Allah has in store for me, and to always be content with whatever Allah has in store for me.
                 </h2>
             </div>
-            <div class="kartu-info">
-             
+            <div class="card">
+    
                 <h3 class="judul-buku">Atomic Habits</h3><br>
                 <img class="book-cover" src="images/atomic_habits.jpg" alt="">
                 <h2 class="writer">Writer : James Clear</h2>
@@ -48,7 +45,7 @@
                     “Atomic Habits” is a book that teaches me to always establish a system for practicing even the smallest habits every day to achieve your desired results. For example, if the goal is to become a runner, then the system involves going for a jog every day, even if it's just for 10 minutes. And more one important point: a plan will never be existed without “action.”
                 </h2>
             </div>
-            <div class="kartu-info">
+            <div class="card">
                 <h3 class="judul-buku">Dopamine Nation</h3><br>
                 <div class="book-cover-container">
                     <img class="book-cover" src="images/dopamine_nation.jpg" alt="">
@@ -61,7 +58,7 @@
             
         </div>
 
-        <div class="kotak-contact" id="contacts">
+        <div class="kotak-contact" id="contacts" data-aos="fade-up" data-aos-delay="300">
             <h2 class="judul-contact">SOCIALS</h2>
             <div class="contact">
                 <a target="_blank" href="https://www.instagram.com/aidrr.17/">
@@ -77,7 +74,8 @@
         </div>
     </div>
     </div>
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
 

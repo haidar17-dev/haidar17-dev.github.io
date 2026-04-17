@@ -1,22 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 
 /* Light Theme */
 :root {
-    --bg-color--: #f7f7f7;
-    --bg-color-secondary--: #ffffff;
-    --text-color--: #09141e;
-    --primary-color: #0882fc;
+    --bg-color--: white;
+    --bg-color-secondary--: #fbfbfb;
+    --text-color--: #d0af4a;
+    --primary-color: #ffd000;
 }
 
 /* Detect Dark Theme */
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-color--: #09141e;
-        --bg-color-secondary--: #102436;
-        --text-color--: white;
-        --primary-color: #0882fc;
+        --bg-color--: rgb(19, 19, 19);
+        --bg-color-secondary--: rgb(23, 23, 23);
+        --text-color--: #d0af4a;
+        --primary-color: #ffd000;
+    }
+
+    .hi {
+        text-shadow: 2px 2px 20px var(--text-color--);
     }
 
     .profile-img {
@@ -33,7 +38,7 @@
 }
 
 html{
-    font-family: 'Poppins';
+    font-family: 'Google Sans';
     margin: 0;
     background-color: var(--bg-color--);
     scroll-behavior: smooth;
@@ -71,36 +76,49 @@ html{
 }
 
 .kotak {
+    padding: 40px 40px 0px 40px;
     flex-wrap: wrap;
-    padding: 60px;
     background-color: var(--bg-color--);
     min-height: 100vh;
-    position: relative;
     height: auto;
     width: 100%;
-    
     display: flex; 
     align-items: flex-start; 
     justify-content: center;
 }
 
 .content-wrapper {
-    margin-top: 10vh;
+    margin-bottom: 25vh;
+    margin-top: 20vh;
     display: flex;
     flex-direction: row; 
     align-items: center;
     justify-content: center;
-    gap: 5vh;
+    gap: 0vh;   
     width: 100%;
     flex-wrap: wrap;
+    text-align: center;
+    flex-direction: column;
 }
 
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container, .text-group {
+    flex: 1;
+    height: 88vh;
+    padding: 0;
+}
 
 .profile-img {
-    width: 300px;
+    filter: invert(65%) sepia(37%) saturate(1588%) hue-rotate(10deg) brightness(95%) contrast(85%);
+  -webkit-filter: invert(65%) sepia(37%) saturate(1588%) hue-rotate(10deg) brightness(95%) contrast(85%);
+    width: 450px;
     height: auto;
     aspect-ratio: 1 / 1;
-    border-radius: 50%;
     pointer-events: none;
     -webkit-touch-callout: none;
     user-select: none;
@@ -111,13 +129,12 @@ html{
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 
 .hi {
-    text-shadow: 0px 0px 8px white;
     color: var(--text-color--);
     font-size: 8vh;
     font-weight: 700;
@@ -150,10 +167,14 @@ html{
 
 
 .info-tambahan {
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;       
-    margin-top: 50px;
+    margin-top: 0px;
+    margin-right: 60px;
+    margin-left: 60px;
+    border-radius: 1pc;
 }
 
 .my-books { /* Judul My Books */
@@ -164,11 +185,11 @@ html{
     align-items: center;
     text-align: center;
     font-weight: 800;
-    margin-top: 26vh;
+    margin-top: 10vh;
     margin-bottom: 25px;
 }
 
-.kartu-info {
+.card {
     height: auto;
     min-height: 300px;
     flex: 1;        
@@ -180,20 +201,12 @@ html{
     flex-direction: column;
     align-items: center;
     transition: 0.4s;
-    box-shadow: 2px 2px 20px 2px var(--bg-color-secondary--);
 }
 
-.kartu-info:hover {
+.card:hover {
     transform: translate(0px, -10px);
 }
 
-.judul-buku-container {
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
 
 .judul-buku {
     font-size: 20px;
@@ -223,7 +236,7 @@ html{
     border-radius: 10px;
 }
 
-.kartu-info h2 {
+.card h2 {
     margin-bottom: 8px;
     font-size: 16px;
     color: var(--text-color--);
@@ -232,6 +245,13 @@ html{
 
 
 @media (max-width: 600px) {
+
+    .text-group {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    }
 
     .my-books {
         margin-top: 15vh;
@@ -244,6 +264,7 @@ html{
 
     .profile-img {
         margin-right: 0vh;
+        width: 300px;
     }
 
     .navbar {
@@ -251,19 +272,15 @@ html{
     }
 
     .hi {
-        font-size: 29px;
+        font-size: 45px;
     }
 
     .desc {
-        font-size: 2vh;
-    }
-
-    .desc .greet {
         font-size: 3vh;
     }
 
     .content-wrapper {
-        margin-top: 0vh;
+        margin-top: 10vh;
         flex-direction: row;
     }
 }
