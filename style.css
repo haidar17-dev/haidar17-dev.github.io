@@ -154,7 +154,7 @@ html{
     color: var(--text-color--);
     font-size: 8vh;
     font-weight: 700;
-    margin-bottom: 0;
+    margin-bottom: 3vh;
 }
 
 .desc {
