@@ -242,6 +242,13 @@ html{
     margin-bottom: 25px;
 }
 
+.link {
+    margin: 2vh 0 2vh 0;
+    color: var(--text-color--);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
 .card {
     height: auto;
     min-height: 300px;
