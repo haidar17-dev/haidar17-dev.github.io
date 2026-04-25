@@ -4,20 +4,20 @@
 
 /* Light Theme */
 :root {
-    --bg-color--: white;
-    --bg-color-secondary--: #fbfbfb;
+    --bg-color--: #f6f6f6;
+    --bg-color-secondary--: white; 
     --text-color--: #d0af4a;
-    --primary-color: #ffd000;
+    --primary-color: black;
 }
 
 /* Detect Dark Theme */
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-color--: rgb(19, 19, 19);
-        --bg-color-secondary--: rgb(23, 23, 23);
+        --bg-color--: rgb(24, 24, 24);
+        --bg-color-secondary--: rgb(30, 30, 30);
         --text-color--: #d0af4a;
-        --primary-color: #ffd000;
+        --primary-color: white;
     }
 
     .hi {
@@ -29,8 +29,17 @@
     }
 }
 
+
 .separator {
     color: var(--text-color--);
+}
+
+#projects {
+    scroll-margin-top: 10vh; 
+}
+
+#achievements {
+    scroll-margin-top: 10vh;
 }
 
 * {
@@ -69,10 +78,15 @@ html{
 }
 
 .menu a{
+    font-size: 15px;
     color: var(--text-color--);
     text-decoration: none;
-    transition: 0.3s;
-    text-align: center;
+    transition: 0.3s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu a:hover{
+    color: var(--primary-color);
 }
 
 .kotak {
@@ -94,11 +108,21 @@ html{
     flex-direction: row; 
     align-items: center;
     justify-content: center;
-    gap: 0vh;   
+    gap: 0vh;
     width: 100%;
     flex-wrap: wrap;
     text-align: center;
     flex-direction: column;
+    transition: 1s;
+}
+
+.name {
+    transition: all 0.3s ease-out;
+}
+
+.content-wrapper:hover .name{
+    color: var(--primary-color);
+    text-shadow: 2px 2px 20px var(--primary-color);
 }
 
 .profile-container {
@@ -125,14 +149,6 @@ html{
     margin-right: 10vh;
 }
 
-.text-group {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .hi {
     color: var(--text-color--);
@@ -145,6 +161,43 @@ html{
     color: var(--text-color--);
     font-size: 20px;
     margin: 0;
+}
+
+.desc span {
+    padding: 0px 2px 0px 2px;
+    border-radius: 5px;
+}
+
+.cta-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.cta {
+    font-weight: 600;
+    width: 200px;
+    padding: 15px 30px;
+    background-color: var(--text-color--);
+    border-radius: 1pc;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Google Sans';
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+.cta:hover {
+    box-shadow: 1px 1px 10px 1px var(--text-color--);
+    transform: translateY(-3px);
+    background-color: white;
+    color: var(--text-color--);
 }
 
 .about {
@@ -177,7 +230,7 @@ html{
     border-radius: 1pc;
 }
 
-.my-books { /* Judul My Books */
+.judul-section {
     width: 100%;
     color: var(--text-color--);
     font-size: 5vh;
@@ -185,7 +238,7 @@ html{
     align-items: center;
     text-align: center;
     font-weight: 800;
-    margin-top: 10vh;
+    margin-top: 20vh;
     margin-bottom: 25px;
 }
 
@@ -193,9 +246,9 @@ html{
     height: auto;
     min-height: 300px;
     flex: 1;        
-    min-width: 300px;
+    min-width: 250px;
     background: var(--bg-color-secondary--);
-    padding: 30px 30px 30px 30px;
+    padding: 0;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -205,10 +258,11 @@ html{
 
 .card:hover {
     transform: translate(0px, -10px);
+    box-shadow: 1px 1px 10px 1px var(--text-color--);
 }
 
 
-.judul-buku {
+.judul-isi {
     font-size: 20px;
     color: var(--text-color--);
     text-align: center;
@@ -218,12 +272,25 @@ html{
     font-weight: 900;
 }
 
-.book-desc {
+.isi-desc {
+    text-align: center;
+    font-size: 30px;
+    color: var(--text-color--);
     font-weight: 200;
-    line-height: 2;
 }
 
-.book-cover {
+.image {
+    object-fit: cover;
+    border-top-left-radius: 1pc;
+    border-top-right-radius: 1pc;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
+.gambar {
     width: 150px;
     height: auto;
     aspect-ratio: 2/3;
@@ -253,7 +320,7 @@ html{
     justify-content: flex-start;
     }
 
-    .my-books {
+    .judul-section {
         margin-top: 15vh;
         font-size: 4vh;
     }
@@ -276,7 +343,7 @@ html{
     }
 
     .desc {
-        font-size: 3vh;
+        font-size: 2vh;
     }
 
     .content-wrapper {
@@ -332,11 +399,28 @@ html{
 }
 
 .contact a{
-    font-size: 30px;
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 25px;
     color: var(--text-color--);
-    transition: 0.3s;
+    transition: 0.4s;
+    background-color: var(--bg-color-secondary--);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .contact a:hover{
     transform: translateY(-3px);
+    border: 2px solid var(--text-color--);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    color: var(--text-color--);
 }

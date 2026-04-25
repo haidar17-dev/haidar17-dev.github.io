@@ -12,53 +12,98 @@
 <body>
     <nav class="navbar">
         <ul class="menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#books">Books</a></li>
-            <li><a href="#contacts">Socials</a></li>
-            <li class="separator">|</li>
-            <li class="separator">👍</li>
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#projects" class="active">Projects</a></li>
+            <li><a href="#achievements" class="active">Achievements</a></li>
+            <li><a href="#contacts" class="active">Socials</a></li>
         </ul>
     </nav>
     <div class="kotak" id="about">
         <div class="content-wrapper">
-            <h2 class="hi"><span style="font-weight: 800;">Hello Everyone 👋</h2><br>
-            <p class="desc">I'm <span style="font-weight: 800;">Haidar</span>. <br> I'm a high school student <br> who is passionate about computer science.<br><br>
-            <p class="desc">I usually spend my time playing or listening to music, <br> exploring IoT and web development, and reading some books...</p>
+            <h2 class="hi">
+                <span class="sapa" style="font-weight: 500;">
+                    Hello Everyone.
+                </span>
+            </h2><br>
+            <p class="desc">My name is <span class="name" style="font-weight:900;">Haidar</span>. <br> I'm a student at SMAN 1 WARU<br> who is passionate about computer science.<br><br>
+            <p class="desc">I like to spend my time playing or listening some music, <br> exploring IoT, Web Development, Python, and reading some non-fiction books...</p>
+            <div class="cta-container">
+                <a href="#projects" style="-webkit-tap-highlight-color: transparent;">
+                    <button class="cta">Current Progress</button>
+                </a>
+                <a href="#contacts" style="-webkit-tap-highlight-color: transparent;">
+                    <button class="cta">Let's Connect</button>
+                </a>
+            </div>
         </div>
-        <h2 class="my-books" id="books">MY FAVORITE BOOKS</h2>
-        <div class="info-tambahan" data-aos="fade-up" data-aos-delay="300">
-            <div class="card">
-            
-                <h3 class="judul-buku">Hari Gini <br> Masih Galau?!</h3>
-                <img class="book-cover" src="images/buku_galau.jpg" alt="">
+        <h2 class="judul-section" id="books">FAVORITE BOOKS</h2>
+        <div class="info-tambahan">
+            <div class="card" style="padding: 30px;">
+                <h3 class="judul-isi">Hari Gini <br> Masih Galau?!</h3>
+                <img class="gambar" src="images/buku_galau.jpg" alt="">
                 <h2 class="writer">Writer : Hilmy Mubarok</h2>
-                <h2 class="book-desc">
-                    In this book, I learned some life lessons that helped me become a better person. It taught me to always have faith and accept whatever fate Allah has in store for me, and to always be content with whatever Allah has in store for me.
+                <h2 class="isi-desc">
+                    It taught me to always have faith and accept whatever fate Allah has in store for me.
                 </h2>
             </div>
-            <div class="card">
+            <div class="card" style="padding: 30px;">
     
-                <h3 class="judul-buku">Atomic Habits</h3><br>
-                <img class="book-cover" src="images/atomic_habits.jpg" alt="">
+                <h3 class="judul-isi">Atomic Habits</h3><br>
+                <img class="gambar" src="images/atomic_habits.jpg" alt="">
                 <h2 class="writer">Writer : James Clear</h2>
-                <h2 class="book-desc">
-                    “Atomic Habits” is a book that teaches me to always establish a system for practicing even the smallest habits every day to achieve your desired results. For example, if the goal is to become a runner, then the system involves going for a jog every day, even if it's just for 10 minutes. And more one important point: a plan will never be existed without “action.”
+                <h2 class="isi-desc">
+                    This book taught me about the smallest habit that we always do it consistently, can make a massive result for the future
                 </h2>
             </div>
-            <div class="card">
-                <h3 class="judul-buku">Dopamine Nation</h3><br>
-                <div class="book-cover-container">
-                    <img class="book-cover" src="images/dopamine_nation.jpg" alt="">
+            <div class="card" style="padding: 30px;">
+                <h3 class="judul-isi">Dopamine Nation</h3><br>
+                <div class="gambar-container">
+                    <img class="gambar" src="images/dopamine_nation.jpg" alt="">
                 </div>
                 <h2 class="writer">Writer : Anna Lembke</h2>
-                <h2 class="book-desc">
-                    From this book, I learned that the reason people struggle to be productive and consistent in one area is because we have habits that release large amounts of dopamine—such as scrolling through social media and playing video games—commonly referred to as “instant dopamine.” This is also closely tied to how we cultivate small habits to become the person or achieve the identity we aspire to.
+                <h2 class="isi-desc">
+                    I learned that the reason people struggle to be consistent with one good habit is because we have habits that release large amounts of dopamine—such as scrolling through social medi-commonly referred to as “instant dopamine.”
                 </h2>
             </div>
-            
+        </div>
+        <h2 class="judul-section" id="projects">PROJECTS</h2>
+        <div class="info-tambahan">
+            <div class="card">
+                <img class="image" src="images/bell.png" alt="">
+                <div style="padding-left: 5vh; padding-right: 5vh;">
+                    <h3 class="judul-isi">DIGITAL BELL</h3>
+                    <h2 class="isi-desc">A simple Digital Bell web-based app using <br> Python (Flask) and JavaScript in real-time</h2>
+                </div>
+            </div>
+            <div class="card">
+                <img class="image" src="images/pegunungan.jpeg" alt="">
+                <div style="padding-left: 5vh; padding-right: 5vh;">
+                    <h3 class="judul-isi">COMING SOON</h3>
+                    <h2 class="isi-desc">...</h2>
+                </div>
+            </div>
+        </div>
+        <h2 class="judul-section" id="achievements">ACHIEVEMENTS</h2>
+        <div class="info-tambahan">
+            <div class="card">
+                <img class="image" src="images/piagam1.png" alt="">
+                <div style="padding-left: 5vh; padding-right: 5vh;">
+                    <h3 class="judul-isi">PANCASILA YOUTH ACADEMIC CHAMPIONSHIP <br> (English)</h3>
+                    <h2 class="isi-desc">Silver Medal | 2025</h2>
+                    <h2 class="writer" style="font-weight: bolder;">ORGANIZER : LKP X AON INDONESIA</h2>
+                </div>
+            </div>
+            <div class="card">
+                <img class="image" src="images/piagamtik.jpg" alt="">
+                <div style="padding-left: 5vh; padding-right: 5vh;">
+                    <h3 class="judul-isi">STUDENT SCIENCE <br> COMPETITION <br>(Informatics)</h3>
+                    <h2 class="isi-desc">Gold Medal | 2026</h2>
+                    <h2 class="writer">ORGANIZER : IYFEST X GYPEM INDONESIA</h2>
+                </div>
+            </div>
         </div>
 
-        <div class="kotak-contact" id="contacts" data-aos="fade-up" data-aos-delay="300">
+        <div class="kotak-contact" id="contacts">
             <h2 class="judul-contact">SOCIALS</h2>
             <div class="contact">
                 <a target="_blank" href="https://www.instagram.com/aidrr.17/">
@@ -74,8 +119,7 @@
         </div>
     </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>AOS.init();</script>
+    <p class="footer">Designed & Built by Adeel Haidar Setiabudi</p>
 </body>
 </html>
 
