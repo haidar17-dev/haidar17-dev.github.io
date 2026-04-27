@@ -12,30 +12,35 @@
 <body>
     <nav class="navbar">
         <ul class="menu">
-            <li><a href="#about" class="active">About</a></li>
-            <li><a href="#projects" class="active">Projects</a></li>
-            <li><a href="#achievements" class="active">Achievements</a></li>
-            <li><a href="#contacts" class="active">Socials</a></li>
+            <li><a href="#about" class="tombol-nav">About</a></li>
+            <li><a href="#favorite-books" class="tombol-nav">Favorite Books</a></li>
+            <li><a href="#projects" class="tombol-nav">Projects</a></li>
+            <li><a href="#contacts" class="tombol-nav">Socials</a></li>
         </ul>
     </nav>
-    <div class="kotak" id="about">
-        <div class="content-wrapper">
-            <h2 class="hi">
-                <span class="sapa" style="font-weight: 500;">
-                    Hello Everyone.
-                </span>
-            </h2><br>
-            <p class="desc">My name is <span class="name" style="font-weight:900;">Haidar</span>. <br> I'm a student at SMAN 1 WARU<br> who is passionate about computer science.<br><br>
-            <p class="desc">I like to spend my time playing or listening some music, <br> exploring IoT, Web Development, Python, and reading some non-fiction books...</p>
-            <div class="cta-container">
-                <a href="#projects" style="-webkit-tap-highlight-color: transparent;">
-                    <button class="cta">Current Progress</button>
-                </a>
-                <a href="#contacts" style="-webkit-tap-highlight-color: transparent;">
-                    <button class="cta">Let's Connect</button>
-                </a>
+    <div class="kotak">
+        <section id="about">
+            <div class="content-wrapper">
+                <h2 class="hi">
+                    <span class="sapa" style="font-weight: 500;">
+                        Hello Everyone.
+                    </span>
+                </h2><br>
+                <p class="desc">My name is <span class="name" style="font-weight:900;">Haidar</span>. <br> I'm a student at SMAN 1 WARU<br> who is passionate about computer science.<br><br>
+                <p class="desc">
+                    I like to spend my time playing or listening to music, <br> exploring technologies like IoT, Web Development, Python for creativity <br> ideas & build something, also i like to read non-fiction books...
+                </p>
+                <div class="cta-container">
+                    <a href="#projects" style="-webkit-tap-highlight-color: transparent;">
+                        <button class="cta">Current Progress</button>
+                    </a>
+                    <a href="#contacts" style="-webkit-tap-highlight-color: transparent;">
+                        <button class="cta">Let's Connect</button>
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
+        <section id="favorite-books">
         <h2 class="judul-section" id="books">FAVORITE BOOKS</h2>
         <div class="info-tambahan">
             <div class="card" style="padding: 30px;">
@@ -66,63 +71,91 @@
                 </h2>
             </div>
         </div>
-        <h2 class="judul-section" id="projects">PROJECTS</h2>
-        <div class="info-tambahan">
-            <div class="card">
-                <img class="image" src="images/bell.png" alt="">
-                <div style="padding-left: 5vh; padding-right: 5vh;">
-                    <h3 class="judul-isi">DIGITAL BELL</h3>
-                    <h2 class="isi-desc">A simple Digital Bell web-based app using <br> Python (Flask) and JavaScript in real-time</h2>
+        </section>
+        <section id="projects">
+            <h2 class="judul-section">PROJECTS</h2>
+            <div class="info-tambahan">
+                <div class="card">
+                    <img class="image" src="images/bell.png" alt="">
+                    <div style="padding-left: 5vh; padding-right: 5vh;">
+                        <h3 class="judul-isi">DIGITAL BELL</h3>
+                        <h2 class="isi-desc">A simple Digital Bell web-based app using <br> Python (Flask) and JavaScript in real-time</h2>
+                    </div>
+                    <a target="_blank" href="https://bell-digital.vercel.app/" class="link">
+                        <i class="fa-solid fa-link"></i>&nbsp;>
+                    </a>
                 </div>
-                <a target="_blank" href="https://bell-digital.vercel.app/" class="link">
-                    <i class="fa-solid fa-link"></i>&nbsp;>
-                </a>
-            </div>
-            <div class="card">
-                <img class="image" src="images/pegunungan.jpeg" alt="">
-                <div style="padding-left: 5vh; padding-right: 5vh;">
-                    <h3 class="judul-isi">COMING SOON</h3>
-                    <h2 class="isi-desc">...</h2>
-                </div>
-            </div>
-        </div>
-        <h2 class="judul-section" id="achievements">ACHIEVEMENTS</h2>
-        <div class="info-tambahan">
-            <div class="card">
-                <img class="image" src="images/piagam1.png" alt="">
-                <div style="padding-left: 5vh; padding-right: 5vh;">
-                    <h3 class="judul-isi">PANCASILA YOUTH ACADEMIC CHAMPIONSHIP <br> (English)</h3>
-                    <h2 class="isi-desc">Silver Medal | 2025</h2>
-                    <h2 class="writer" style="font-weight: bolder;">ORGANIZER : LKP X AON INDONESIA</h2>
+                <div class="card">
+                    <img class="image" src="images/pegunungan.jpeg" alt="">
+                    <div style="padding-left: 5vh; padding-right: 5vh;">
+                        <h3 class="judul-isi">COMING SOON</h3>
+                        <h2 class="isi-desc">...</h2>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img class="image" src="images/piagamtik.jpg" alt="">
-                <div style="padding-left: 5vh; padding-right: 5vh;">
-                    <h3 class="judul-isi">STUDENT SCIENCE <br> COMPETITION <br>(Informatics)</h3>
-                    <h2 class="isi-desc">Gold Medal | 2026</h2>
-                    <h2 class="writer">ORGANIZER : IYFEST X GYPEM INDONESIA</h2>
+        </section>
+        <section>
+            <div class="kotak-contact" id="contacts">
+                <section id="contacts"></section>
+                <h2 class="judul-contact">SOCIALS</h2>
+                <div class="contact">
+                    <a target="_blank" href="https://www.instagram.com/aidrr.17/">
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                    </a>
+                    <a target="_blank" href="https://github.com/haidar17-dev">
+                        <span><i class="fa-brands fa-github"></i></span>
+                    </a>
+                    <a target="_blank" href="https://www.youtube.com/@haidrr.17">
+                        <span><i class="fa-brands fa-youtube"></i></span>
+                    </a>
                 </div>
             </div>
-        </div>
-
-        <div class="kotak-contact" id="contacts">
-            <h2 class="judul-contact">SOCIALS</h2>
-            <div class="contact">
-                <a target="_blank" href="https://www.instagram.com/aidrr.17/">
-                    <span><i class="fa-brands fa-instagram"></i></span>
-                </a>
-                <a target="_blank" href="https://github.com/haidar17-dev">
-                    <span><i class="fa-brands fa-github"></i></span>
-                </a>
-                <a target="_blank" href="https://www.youtube.com/@haidrr.17">
-                    <span><i class="fa-brands fa-youtube"></i></span>
-                </a>
-            </div>
-        </div>
+        </section>
     </div>
     </div>
     <p class="footer">Designed & Built by Adeel Haidar Setiabudi</p>
+    <script>
+        const navs = document.querySelectorAll('.tombol-nav')
+
+        navs.forEach(nav => {
+            nav.addEventListener('click', () => {
+                navs.forEach(item => item.classList.remove('active'));
+                nav.classList.add('active');
+            });
+        });
+
+
+
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.tombol-nav');
+
+        const options = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Ambil ID section yang sedang terlihat
+                    const id = entry.target.getAttribute('id');
+                    
+                    // Bersihkan class active dari semua tombol dulu
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        // Cek apakah link ini menuju ke ID yang sedang aktif
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, options);
+
+        // Suruh observer mengawasi setiap section
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
 
