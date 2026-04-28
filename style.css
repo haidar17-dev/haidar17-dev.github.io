@@ -34,9 +34,12 @@
     color: var(--text-color--);
 }
 
+#projects {
+    scroll-margin-top: 0vh;
+}
 
 #achievements {
-    scroll-margin-top: 25vh;
+    scroll-margin-top: 0vh;
 }
 
 * {
@@ -51,19 +54,36 @@ html{
 }
 
 .navbar{
-    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    justify-content: space-around;
     align-items: center;
     display: flex;
     color: white;
     z-index: 1000;
     position: fixed;
-    top: 0;
-    background-color: rgba(44, 44, 44, 0, 0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 1pc;
+    background-color: rgb(from var(--bg-color--) r g b / 100%);
     height: 0 auto;
     width: 100%;
+}
+
+nav p{
+    margin-left: 3vh;
+    color: var(--text-color--);
+    font-size: 20px;
+    font-weight: 900;
+    position: relative;
+    display: inline-block;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-color--);
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .menu{
@@ -323,12 +343,42 @@ html{
 
 
 @media (max-width: 630px) {
+    .menu-toggle {
+        -webkit-tap-highlight-color: transparent;
+        display: block;
+    }
+
+    .menu {
+        margin-right: 2vh;
+        -webkit-tap-highlight-color: transparent;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        background-color: var(--bg-color-secondary--);
+        padding: 20px 0;
+        border-radius: 1pc 1pc 1pc 1pc;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        gap: 15px;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .navbar {
+        padding: 10px 20px;
+        justify-content: space-between;
+        transform: none;
+    }
 
     .text-group {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .judul-section {
@@ -345,9 +395,6 @@ html{
         width: 300px;
     }
 
-    .navbar {
-        transform: translate(-25px);
-    }
 
     .hi {
         font-size: 45px;
@@ -358,7 +405,7 @@ html{
     }
 
     .content-wrapper {
-        margin-top: 10vh;
+        margin-top: 5vh;
         flex-direction: row;
     }
 }
