@@ -115,6 +115,7 @@ nav p{
 }
 
 .kotak {
+    text-align: center;
     padding: 40px 40px 0px 40px;
     flex-wrap: wrap;
     background-color: var(--bg-color--);
@@ -255,7 +256,7 @@ nav p{
 }
 
 .judul-section {
-    width: 100%;
+    font-family: 'Poppins';
     color: var(--text-color--);
     font-size: 5vh;
     justify-content: center;
@@ -277,7 +278,7 @@ nav p{
     height: auto;
     min-height: 300px;
     flex: 1;        
-    min-width: 250px;
+    min-width: 230px;
     background: var(--bg-color-secondary--);
     padding: 0;
     border-radius: 15px;
