@@ -10,12 +10,13 @@ html {
     scroll-behavior: smooth;
 }
 
-#home, #skill, #services, #projects, #contacts {
+#home, #skill, #services, #projects, #achievements, #contacts {
     scroll-margin-top: 12vh;
 }
 
 #home {
-    background-color: var(--bg-third-color);
+    display: flex;
+    padding: 100px;
     border-bottom-left-radius: 70% 20px;
     border-bottom-right-radius: 70% 20px;
 }
@@ -71,7 +72,7 @@ body {
 
 .section-title {
     text-align: center;
-    font-size: 50px;
+    font-size: 48px;
     color: var(--primary-color);
     margin-top: 70px;
 }
@@ -88,7 +89,7 @@ body {
 }
 
 .shape {
-    opacity: 15%;
+    opacity: 40%;
     position: absolute;
     background-color: var(--bg-sec-color);
     animation: floatAndRotate 20s infinite linear;
@@ -184,11 +185,12 @@ nav .nav-name, nav .navs, nav a{
 
 .navbar {
     padding: 0 50px 0 50px;
-    top: 0%;
+    top: 2%;
     right: 0;
     left: 0;
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
+    border-radius: 1pc;
     position: fixed;
     z-index: 9999;
     background-color: rgba(from var(--bg-sec-color) r g b / 60%);
@@ -197,7 +199,7 @@ nav .nav-name, nav .navs, nav a{
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     transition: all 0.5s ease;
 }
 
@@ -205,6 +207,7 @@ nav .nav-name, nav .navs, nav a{
     font-weight: 900;
     text-decoration: none;
     color: var(--primary-color);
+    font-size: 20px;
 }
 
 .navs {
@@ -243,7 +246,7 @@ nav .nav-name, nav .navs, nav a{
 }
 .hamburger-btn i {
     color: var(--primary-color);
-    font-size: 20px;
+    font-size: 24px;
 }
 .mobile-menu {
   overflow: hidden;
@@ -272,7 +275,7 @@ nav .nav-name, nav .navs, nav a{
   text-decoration: none;
   color: var(--primary-color); /* ganti dari #555 */
   border-bottom: 1px solid rgba(from var(--bg-sec-color) r g b / 30%);
-  font-size: 15px;
+  font-size: 18px;
   transition: 0.3s;
 }
 .mobile-menu ul li a:hover {
@@ -314,7 +317,6 @@ nav .nav-name, nav .navs, nav a{
 }
 
 .container {
-    padding: 30px 50px 0px 100px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -385,7 +387,7 @@ nav .nav-name, nav .navs, nav a{
     text-align: center;
     width: 60px;
     height: 60px;
-    font-size: 35px;
+    font-size: 32px;
     line-height: 1.7;
     color: var(--primary-color);
     border-radius: 20%;
@@ -394,7 +396,7 @@ nav .nav-name, nav .navs, nav a{
 
 .benefit-judul {
     margin: 0;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 600;
     color: var(--primary-color);
     text-align: left;
@@ -410,7 +412,7 @@ nav .nav-name, nav .navs, nav a{
     color: var(--grey);
     margin: 0;
     text-align: left;
-    font-size: 19px;
+    font-size: 16px;
 }
 
 .link-service {
@@ -420,7 +422,7 @@ nav .nav-name, nav .navs, nav a{
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 15px;
+    font-size: 16px;
     text-decoration: none;
     background-color: var(--primary-color);
     color: var(--bg-sec-color);
@@ -476,7 +478,7 @@ nav .nav-name, nav .navs, nav a{
 }
 
 .badge-label {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--primary-color);
   opacity: 0;
   transform: translateY(-6px);
@@ -516,12 +518,12 @@ nav .nav-name, nav .navs, nav a{
 }
 
 .content h1 {
-    font-size: 60px;
+    color: var(--blue);
+    font-size: 64px;
     line-height: 1.11;
 }
 
 .cta-container a {
-    background-color: var(--bg-sec-color);
     display: inline-block;
     width: fit-content;
     color: var(--primary-color);
@@ -529,39 +531,37 @@ nav .nav-name, nav .navs, nav a{
     border-radius: 8px;
     text-decoration: none;
     transition: 0.3s;
-    font-size: 30px;
-    border-radius: 16px;
-    padding: 10px;
+    font-size: 36px;
+    border-radius: 50%;
     transition: all 0.3s ease;
 }
 
 .cta-container a:hover {
-    color: var(--bg-third-color);
-    background-color: var(--primary-color);
+    transform: translateY(-5px) scale(1.1);
 }
 
 .content h3 {
-    font-size: 30px;
+    font-size: 32px;
     animation: upAndDown 2s ease-in-out infinite alternate;
     text-align: center;
 }
 
 .content h4 {
     text-align: left;
-    font-size: 20px;
+    font-size: 24px;
     color: var(--grey);
 }
 
 #typewriter {
     font-weight: 500;
-    color: var(--blue);
-    font-size: 44px;
+    color: var(--primary-color);
+    font-size: 40px;
 }
 
 #typewriter::after {
     content: "|";
     animation: blink 0.7s step-end infinite;
-    background: var(--blue);
+    background: var(--primary-color);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -636,6 +636,9 @@ nav .nav-name, nav .navs, nav a{
 }
 
 @media (max-width: 630px) {
+    #home {
+        padding: 30px;
+    }
     #main-img {
         border-radius: 40%;
         width: 100%;
@@ -646,14 +649,23 @@ nav .nav-name, nav .navs, nav a{
         order: 2;
     }
 
-    .content {
-        order: 1;
+    .content h1 {
+        font-size: 48px;
     }
+
+    .content h4 {
+        font-size: 24px;
+    }
+
+    #typewriter {
+        font-size: 36px;
+    }
+
     nav {
         justify-content: space-between;
     }
     footer {
-        font-size: 13px;
+        font-size: 16px;
     }
     .container {
         flex-direction: column;
@@ -665,7 +677,7 @@ nav .nav-name, nav .navs, nav a{
         max-width: 1000px;
     }
     .section-title {
-        font-size: 35px;
+        font-size: 32px;
     }
 }
 
@@ -778,7 +790,7 @@ nav .nav-name, nav .navs, nav a{
 
 .card h2 {
     text-align: center;
-    font-size: 25px;
+    font-size: 24px;
     color: var(--primary-color);
 }
 
@@ -790,7 +802,7 @@ nav .nav-name, nav .navs, nav a{
     line-height: 1.5;
     text-align: center;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 24px;
     color: var(--grey);
 }
 
@@ -811,7 +823,7 @@ nav .nav-name, nav .navs, nav a{
     background-color: var(--bg-third-color);
     padding: 15px 30px;
     color: var(--primary-color);
-    font-size: 15px;
+    font-size: 16px;
     border-radius: 1pc;
 }
 
@@ -851,7 +863,7 @@ nav .nav-name, nav .navs, nav a{
 .contact a {
     margin-bottom: 100px;
     background-color: var(--bg-third-color);
-    font-size: 30px;
+    font-size: 32px;
     text-decoration: none;
     color: var(--primary-color);
     padding: 10px;
@@ -869,6 +881,87 @@ nav .nav-name, nav .navs, nav a{
     line-height: 1.5;
     text-align: center;
     margin-top: 20px;
-    font-size: 19px;
+    font-size: 24px;
+    color: var(--grey);
+}
+
+/* Competition/Achievements */
+
+.comp-con {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.comp {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+/* Garis vertikal utama */
+.comp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 120px; /* Jarak garis dari kiri */
+    width: 2px;
+    background-color: var(--primary-color);
+}
+
+.comp-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Bullet */
+
+.comp-item::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 113px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgb(from var(--bg-color) r g b / 1);
+    border: 2px solid var(--primary-color);
+}
+
+.comp-timestamp {
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+.comp-organizer {
+    color: var(--primary-color);
+}
+
+.comp-content {
+    margin-left: 145px;
+    background: rgb(from var(--bg-sec-color) r g b / 0.7);;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.comp-content h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: var(--blue);
+}
+
+.comp-content p {
+    margin: 0;
+    font-size: 16px;
     color: var(--grey);
 }

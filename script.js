@@ -11,10 +11,12 @@ window.addEventListener('scroll', () => {
     navbar.style.backgroundColor = 'rgba(from var(--bg-sec-color) r g b / 60%)';
     navbar.style.backdropFilter = 'blur(10px)';
     navbar.style.webkitBackdropFilter = 'blur(10px)';
+    navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
   } else {
     navbar.style.backgroundColor = 'transparent';
     navbar.style.backdropFilter = 'blur(0px)';
     navbar.style.webkitBackdropFilter = 'blur(0px)';
+    navbar.style.boxShadow = 'none';
   }
 });
 
@@ -40,8 +42,8 @@ function changeImg(thumb) {
 
 // Typewriter
 
-const texts = ["Junior Web Developer", "High School Student"];
-const speed = 100;
+const texts = ["Typing...", "High School Student"];
+const speed = 155;
 let textIndex = 0;
 let charIndex = 0;
 
