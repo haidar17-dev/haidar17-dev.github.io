@@ -42,7 +42,7 @@ function changeImg(thumb) {
 
 // Typewriter
 
-const texts = ["High School Student", "typing..."];
+const texts = ["High School Student", "Computer Engineering"];
 const speed = 155;
 let textIndex = 0;
 let charIndex = 0;
