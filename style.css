@@ -741,6 +741,7 @@ nav .nav-name, nav .navs, nav a{
 
 .card-container {
     flex: 1;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;       
@@ -752,10 +753,11 @@ nav .nav-name, nav .navs, nav a{
 
 .card {
     flex-wrap: wrap;
+    max-width: 400px;
     height: auto;
-    min-height: 400px;
+    min-height: 200px;
     flex: 1;        
-    min-width: 230px;
+    min-width: 300px;
     background-color: rgb(from var(--bg-sec-color) r g b / 0.7);
     border-radius: 1pc;
     display: flex;
@@ -784,6 +786,7 @@ nav .nav-name, nav .navs, nav a{
 }
 
 .card img {
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     width: 100%;
 }
@@ -792,6 +795,7 @@ nav .nav-name, nav .navs, nav a{
     text-align: center;
     font-size: 24px;
     color: var(--primary-color);
+    min-height: 60px;
 }
 
 .card h2 a {
