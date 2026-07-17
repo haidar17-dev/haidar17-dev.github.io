@@ -1,73 +1,75 @@
-AOS.init({
-  offset: 0,
-  delay: 0,
-  duration: 400
-});
-
+// Navbar background on scroll
 const navbar = document.getElementById('navs');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) {
-    navbar.style.backgroundColor = 'rgba(from var(--bg-sec-color) r g b / 60%)';
-    navbar.style.backdropFilter = 'blur(10px)';
-    navbar.style.webkitBackdropFilter = 'blur(10px)';
-    navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
-  } else {
-    navbar.style.backgroundColor = 'transparent';
-    navbar.style.backdropFilter = 'blur(0px)';
-    navbar.style.webkitBackdropFilter = 'blur(0px)';
-    navbar.style.boxShadow = 'none';
-  }
-});
+function handleScroll() {
+    if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}
+window.addEventListener('scroll', handleScroll);
+handleScroll();
 
+// Mobile menu toggle
 const btn = document.getElementById('hamburgerBtn');
 const menu = document.getElementById('mobileMenu');
 
 btn.addEventListener('click', () => {
-  menu.classList.toggle('open');
+    const isOpen = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
 });
 
-// Change Hero's image
+menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', false);
+    });
+});
 
-function changeImg(thumb) {
-  const main = document.getElementById('main-img');
-  main.style.opacity = 0;
-  main.style.transform = 'scale(0.95)';
-  setTimeout(() => {
-    main.src = thumb.src;
-    main.style.opacity = 1;
-    main.style.transform = 'scale(1)';
-  }, 300);
-}
-
-// Typewriter
-
-const texts = ["High School Student", "Computer Engineering"];
-const speed = 155;
+// Typewriter (terminal-style role rotator)
+const texts = ["High School Student", "\"Eureka\" moment"];
+const speed = 65;
+const pause = 1600;
 let textIndex = 0;
 let charIndex = 0;
+const el = document.getElementById('typewriter');
 
 function typeWriter() {
     if (charIndex < texts[textIndex].length) {
-        document.getElementById("typewriter").textContent += texts[textIndex].charAt(charIndex);
+        el.textContent = texts[textIndex].substring(0, charIndex + 1) + '_';
         charIndex++;
         setTimeout(typeWriter, speed);
     } else {
-        setTimeout(eraseText, 2000);
+        setTimeout(eraseText, pause);
     }
 }
 
 function eraseText() {
     if (charIndex > 0) {
-        const currentText = texts[textIndex].substring(0, charIndex - 1);
-        document.getElementById("typewriter").textContent = currentText;
         charIndex--;
-        setTimeout(eraseText, speed / 1); 
+        el.textContent = texts[textIndex].substring(0, charIndex) + '_';
+        setTimeout(eraseText, speed / 2);
     } else {
-        textIndex++;
-        if (textIndex >= texts.length) textIndex = 0;
+        textIndex = (textIndex + 1) % texts.length;
         setTimeout(typeWriter, speed);
     }
 }
 
 typeWriter();
+
+// Reveal sections on scroll
+const revealTargets = document.querySelectorAll('section');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.12 });
+
+revealTargets.forEach(section => {
+    section.classList.add('reveal');
+    observer.observe(section);
+});
