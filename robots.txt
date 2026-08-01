@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://haidar17.is-a.dev/sitemap.xml
