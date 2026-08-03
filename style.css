@@ -224,13 +224,14 @@ section {
 
 .hero-visual {
     flex-shrink: 0;
-    width: 300px;
+    width: 400px;
 }
 
 .hero-visual img {
+    object-position: top center;
     width: 100%;
     object-fit: cover;
-    border-radius: 16px;
+    border-radius: 50%;
     display: block;
 }
 
