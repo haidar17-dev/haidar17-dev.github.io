@@ -28,7 +28,7 @@ menu.querySelectorAll('a').forEach(link => {
 });
 
 // Typewriter (terminal-style role rotator)
-const texts = ["High School Student", "\"Eureka\" moment"];
+const texts = ["Junior Web Developer","High School Student", "\"Eureka\" moment"];
 const speed = 65;
 const pause = 1600;
 let textIndex = 0;

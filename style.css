@@ -27,7 +27,7 @@ html {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: #0B0E14;
+        --bg: #080e19;
         --bg-elev: #12161F;
         --ink: #ECEDEE;
         --muted: #93989F;
@@ -440,6 +440,12 @@ section {
     padding: 4px 10px;
     border-radius: 6px;
     margin-bottom: 14px;
+}
+
+.web-link {
+    text-decoration: none;
+    color: var(--ink);
+    font-family: var(--font-display);
 }
 
 .card h3 {
