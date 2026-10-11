@@ -27,8 +27,8 @@ html {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: #080e19;
-        --bg-elev: #12161F;
+        --bg: #15181c;
+        --bg-elev: #282a2f;
         --ink: #ECEDEE;
         --muted: #93989F;
         --line: rgba(255, 255, 255, 0.1);
@@ -303,10 +303,10 @@ section {
     justify-content: center;
     width: 44px;
     height: 44px;
-    border-radius: 50%;
-    border: 1px solid var(--line);
+    border-radius: 30%;
+    /* border: 1px solid var(--line); */
     color: var(--ink);
-    font-size: 18px;
+    font-size: 24px;
     text-decoration: none;
     transition: all 0.25s ease;
 }
@@ -325,9 +325,9 @@ section {
     width: auto;
     height: 44px;
     border-radius: 16px;
-    border: 1px solid var(--line);
+    /* border: 1px solid var(--line); */
     color: var(--ink);
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     transition: all 0.25s ease;
 }
