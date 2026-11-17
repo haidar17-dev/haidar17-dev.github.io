@@ -1,17 +1,13 @@
-// Navbar background on scroll
+// Navbar: tambah latar saat scroll
 const navbar = document.getElementById('navs');
 
 function handleScroll() {
-    if (window.scrollY > 40) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
 }
-window.addEventListener('scroll', handleScroll);
+window.addEventListener('scroll', handleScroll, { passive: true });
 handleScroll();
 
-// Mobile menu toggle
+// Menu mobile
 const btn = document.getElementById('hamburgerBtn');
 const menu = document.getElementById('mobileMenu');
 
@@ -27,49 +23,21 @@ menu.querySelectorAll('a').forEach(link => {
     });
 });
 
-// Typewriter (terminal-style role rotator)
-const texts = ["print('Hello :>')"];
-const speed = 65;
-const pause = 1600;
-let textIndex = 0;
-let charIndex = 0;
-const el = document.getElementById('typewriter');
+// Toggle dark / light mode (default: light)
+const themeBtn = document.getElementById('themeToggle');
+const root = document.documentElement;
 
-function typeWriter() {
-    if (charIndex < texts[textIndex].length) {
-        el.textContent = texts[textIndex].substring(0, charIndex + 1) + '_';
-        charIndex++;
-        setTimeout(typeWriter, speed);
-    } else {
-        setTimeout(eraseText, pause);
-    }
+function syncThemeBtn() {
+    const dark = root.getAttribute('data-theme') === 'dark';
+    themeBtn.setAttribute('aria-pressed', dark);
+    themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
 }
+syncThemeBtn();
 
-function eraseText() {
-    if (charIndex > 0) {
-        charIndex--;
-        el.textContent = texts[textIndex].substring(0, charIndex) + '_';
-        setTimeout(eraseText, speed / 2);
-    } else {
-        textIndex = (textIndex + 1) % texts.length;
-        setTimeout(typeWriter, speed);
-    }
-}
-
-typeWriter();
-
-// Reveal sections on scroll
-const revealTargets = document.querySelectorAll('section');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.12 });
-
-revealTargets.forEach(section => {
-    section.classList.add('reveal');
-    observer.observe(section);
+themeBtn.addEventListener('click', () => {
+    const toDark = root.getAttribute('data-theme') !== 'dark';
+    if (toDark) root.setAttribute('data-theme', 'dark');
+    else root.removeAttribute('data-theme');
+    try { localStorage.setItem('theme', toDark ? 'dark' : 'light'); } catch (e) {}
+    syncThemeBtn();
 });

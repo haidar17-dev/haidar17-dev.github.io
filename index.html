@@ -2,189 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adeel Haidar Setiabudi - Portfolio</title>
     <meta name="description" content="Adeel Haidar Setiabudi adalah seorang Tech Enthusiast">
     <meta name="keywords" content="Adeel Haidar Setiabudi, Pelajar SMAN 1 Waru, SMA Negeri 1 Waru, Web Developer">
     <link rel="canonical" href="https://haidar17.is-a.dev/index.html">
-
     <meta name="google-site-verification" content="TA1qBL-r3deAnavoIcd09vkvFd85dmZZk5UKqXhF1ZM" />
-    <!-- Open Graph (Agar rapi saat dibagikan ke WA/Sosmed) -->
     <meta property="og:title" content="Haidar Setiabudi">
     <meta property="og:description" content="Haidar Setiabudi">
     <meta property="og:image" content="https://haidar17.is-a.dev/images/hero.jpeg">
     <meta property="og:url" content="https://haidar17.is-a.dev/index.html">
     <meta property="og:type" content="website">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/hero.png">
-
+    <script>
+        try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); } catch (e) {}
+    </script>
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Adeel Haidar Setiabudi",
-            "url": "https://haidar17.is-a.dev",
-            "logo": "https://haidar17.is-a.dev/images/logo.png",
-            "sameAs": [
-                "https://instagram.com/bunghaidrr"
-            ]
-        }
+    {"@context":"https://schema.org","@type":"WebSite","name":"Adeel Haidar Setiabudi","url":"https://haidar17.is-a.dev","logo":"https://haidar17.is-a.dev/images/logo.png","sameAs":["https://instagram.com/bunghaidrr"]}
     </script>
 </head>
 <body>
 
-    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="shapes" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+            <g style="--d:18s;--dl:-2s;--x:14px;--y:-26px;--r:4deg"><circle class="o" cx="1180" cy="210" r="150" opacity=".13"/></g>
+            <g style="--d:22s;--dl:-9s;--x:-10px;--y:20px;--r:0deg"><circle class="o" cx="1180" cy="210" r="100" opacity=".07"/></g>
+            <g style="--d:15s;--dl:-5s;--x:-18px;--y:-22px;--r:0deg"><circle class="s" cx="1310" cy="560" r="70" opacity=".04"/></g>
+            <g style="--d:20s;--dl:-11s;--x:16px;--y:24px;--r:-8deg"><rect class="s" x="1090" y="640" width="150" height="150" opacity=".03" transform="rotate(18 1165 715)"/></g>
+            <g style="--d:24s;--dl:-4s;--x:-14px;--y:-18px;--r:6deg"><rect class="o" x="1020" y="590" width="150" height="150" opacity=".1" transform="rotate(18 1095 665)"/></g>
+            <g style="--d:17s;--dl:-7s;--x:12px;--y:-28px;--r:-5deg"><polygon class="o" points="120,780 260,540 400,780" opacity=".11"/></g>
+            <g style="--d:21s;--dl:-13s;--x:-12px;--y:22px;--r:7deg"><polygon class="s" points="60,300 150,150 240,300" opacity=".035"/></g>
+            <g style="--d:19s;--dl:-1s;--x:18px;--y:16px;--r:10deg"><polygon class="o" points="600,90 660,125 660,195 600,230 540,195 540,125" opacity=".09"/></g>
+            <g style="--d:16s;--dl:-8s;--x:-16px;--y:-20px;--r:-12deg"><polygon class="s" points="820,760 880,820 820,880 760,820" opacity=".05"/></g>
+            <g style="--d:23s;--dl:-6s;--x:10px;--y:26px;--r:0deg"><circle class="o" cx="480" cy="640" r="46" opacity=".14"/></g>
+            <g style="--d:14s;--dl:-10s;--x:20px;--y:-14px;--r:3deg"><rect class="s" x="30" y="560" width="90" height="26" opacity=".06"/></g>
+            <g style="--d:25s;--dl:-3s;--x:-18px;--y:18px;--r:-4deg"><rect class="o" x="1250" y="60" width="120" height="60" opacity=".12"/></g>
+        </svg>
+    </div>
 
     <nav class="navbar" id="navs">
-        <a href="#home" class="nav-name">Haidar Setiabudi</a>
-
+        <a href="#home" class="nav-name">HAIDAR SETIABUDI</a>
+        <div class="nav-right">
         <ul class="navs">
-            <li><a href="#home">About</a></li>
             <li><a href="#projects">Works</a></li>
+            <li><a href="#experiences">Experiences</a></li>
             <li><a href="#achievements">Awards</a></li>
             <li><a href="#contacts">Contact</a></li>
         </ul>
-
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false">
+            <i class="fa-solid fa-moon icon-moon"></i>
+            <i class="fa-solid fa-sun icon-sun"></i>
+        </button>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation" aria-expanded="false">
             <i class="fa-solid fa-bars"></i>
         </button>
+        </div>
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
         <ul>
-            <li><a href="#home">About</a></li>
             <li><a href="#projects">Works</a></li>
+            <li><a href="#experiences">Experiences</a></li>
             <li><a href="#achievements">Awards</a></li>
             <li><a href="#contacts">Contact</a></li>
         </ul>
     </div>
 
-    <!-- Home -->
-    <section id="home">
-        <div class="hero">
-            <div class="hero-text">
-                <p class="eyebrow">// about</p>
-                <h1>Student & Aspiring Web Developer</h1>
-                <p class="status-line"><span class="status-dot"></span> SMAN 1 WARU<span class="cursor">_</span></p>
-                <!-- <p class="hero-role" id="typewriter"></p> -->
-                <p class="hero-desc">
-                    I'm Haidar. a high school student who is interested in psychology and technology. I enjoy exploring and developing various personal projects to bring my ideas for digital products to life and solve problems in my community.
-                </p>
-                <div class="cta-container">
-                    <a target="_blank" href="https://instagram.com/bunghaidrr" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a target="_blank" href="https://linkedin.com/in/adeel-haidar-setiabudi-1b8450419" aria-label="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
-                    <a target="_blank" href="https://github.com/haidar17-dev" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a id="see-works" href="#projects"><i class="fa-solid fa-eye"></i>&nbsp; View My Works</a>
-                </div>
-            </div>
-           <div class="hero-visual">
-                <!-- <img src="images/propil.jpeg" alt="Adeel Haidar Setiabudi"> -->
-            </div>
-        </div>
-    </section>
+    <main>
+        <section id="home">
+            <h1>Adeel Haidar Setiabudi</h1>
+            <p class="role">Student | Developer</p>
+            <p class="hero-desc">
+                A high school student at SMAN 1 WARU, has interested in psychology and technology. I enjoy exploring and developing personal projects that bring my ideas for digital products to life and solve problems in my community.
+            </p>
+            <p class="skills">HTML | CSS | JavaScript | Python</p>
+            <a class="btn" href="#projects">View my works&nbsp; <i class="fa-solid fa-arrow-turn-down"></i></a>
+        </section>
 
-    <!-- Skills -->
-    <section id="skill">
-        <p class="eyebrow center">// technical skills</p>
-        <div class="badge">
-            <div class="badge-item">
-                <i class="fa-brands fa-html5"></i>
-                <span class="badge-label">HTML5</span>
-            </div>
-            <div class="badge-item">
-                <i class="fa-brands fa-css3-alt"></i>
-                <span class="badge-label">CSS</span>
-            </div>
-            <div class="badge-item">
-                <i class="fa-brands fa-js"></i>
-                <span class="badge-label">JavaScript</span>
-            </div>
-            <div class="badge-item">
-                <i class="fa-brands fa-python"></i>
-                <span class="badge-label">Python</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-        <p class="eyebrow center">// projects</p>
-        <h2 class="section-title">Selected Work</h2>
-        <div class="card-container">
-            <div class="card">
-                <div class="card-img"><img src="images/organisasi.png" alt="School Organization Website"></div>
-                <div class="card-body">
-                    <span class="tag">Website</span>
+        <section id="projects">
+            <h2>Works</h2>
+            <div class="card-container">
+                <article class="card">
+                    <img src="images/organisasi.png" alt="School Organization Website">
                     <h3>School Organization Website</h3>
-                    <p>Organization website with Google Spreadsheet database integration for easy management, and division categories displayed in real time.</p><br>
-                    <a class="web-link" href="https://organisasisekolah.pages.dev/" target="_blank">
-                        <i class="fa-solid fa-link"></i> Link Demo >
-                    </a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img"><img src="images/presensi.png" alt="Digital Presence App"></div>
-                <div class="card-body">
-                    <span class="tag">Web App</span>
+                    <p>Organization website with Google Spreadsheet database integration for easy management, and division categories displayed in real time.</p>
+                    <ul class="stack" aria-label="Tech stack">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Google Sheets</li>
+                    </ul>
+                    <a class="web-link" href="https://organisasisekolah.pages.dev/" target="_blank" rel="noopener">View demo</a>
+                </article>
+                <article class="card">
+                    <img src="images/presensi.png" alt="Digital Presence App">
                     <h3>Digital Presence App</h3>
                     <p>Attendance tracking app with anti-proxy functionality via user location, plus per-device attendance restrictions.</p>
-                </div>
+                    <ul class="stack" aria-label="Tech stack">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Python</li>
+                        <li>Flask</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Achievements -->
-    <section id="achievements">
-        <p class="eyebrow center">// awards</p>
-        <h2 class="section-title">Awards</h2>
-        <div class="comp-con">
+        <section id="experiences">
+            <h2>Experiences</h2>
+
+            <div class="exp-list">
+                <article class="exp">
+                    <span class="exp-date">Jan 2026 – Des 2026</span>
+                    <div class="exp-body">
+                        <h3>Coordinator of Dakwah</h3>
+                        <p class="exp-org">Remaja Masjid Al-Hidayah SMAN 1 WARU</p>
+                        <p>Be responsible for the strategic planning and implementation of religious activities for Muslim members of SMAN 1 WARU.</p>
+                    </div>
+                </article>
+                <article class="exp">
+                    <span class="exp-date">Agustus 2026</span>
+                    <div class="exp-body">
+                        <h3>Event Coordinator of MAULID NABI 2026</h3>
+                        <p class="exp-org">Remaja Masjid Al-Hidayah SMAN 1 WARU</p>
+                        <p>Served as the person in charge of the MAULID NABI Celebration competition, overseeing logistics, administration, and other related tasks</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>Awards</h2>
             <ul class="comp">
                 <li class="comp-item">
-                    <div class="comp-timestamp">Apr 2026</div>
-                    <div class="comp-content">
+                    <span class="comp-timestamp">Apr 2026</span>
+                    <div>
                         <h3>🥇 Gold Medalist — KS2N 2026, National Science Competition (Informatics)</h3>
-                        <h4 class="comp-organizer">IYFEST × BEM FIKKIA, Airlangga University</h4>
+                        <p class="comp-organizer">IYFEST × BEM FIKKIA, Airlangga University</p>
                     </div>
                 </li>
                 <li class="comp-item">
-                    <div class="comp-timestamp">Apr 2026</div>
-                    <div class="comp-content">
+                    <span class="comp-timestamp">Apr 2026</span>
+                    <div>
                         <h3>🥉 Bronze Medalist — Festival Competition Olympiad (Mathematics)</h3>
-                        <h4 class="comp-organizer">University ID Education</h4>
+                        <p class="comp-organizer">University ID Education</p>
                     </div>
                 </li>
                 <li class="comp-item">
-                    <div class="comp-timestamp">Jun 2026</div>
-                    <div class="comp-content">
+                    <span class="comp-timestamp">Jun 2026</span>
+                    <div>
                         <h3>🥈 2nd Place — Youth Scientific Competition (Team)</h3>
-                        <h4 class="comp-organizer">Youth Scientific Paper (KIR), SMAN 1 Waru</h4>
-                        <p>Research on banana-leaf-based polybags integrated with an Arduino Uno automated gardening system.</p>
+                        <p class="comp-organizer">Youth Scientific Paper (KIR), SMAN 1 Waru</p>
+                        <p class="comp-note">Research on banana-leaf-based polybags integrated with an Arduino Uno automated gardening system.</p>
                     </div>
                 </li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact -->
-    <section id="contacts">
-        <div class="contact-container">
-            <p class="eyebrow center">// contact</p>
-            <h2 class="section-title">Let's Connect</h2>
+        <section id="contacts">
+            <h2>Contact</h2>
             <p class="contact-desc">Open to collaboration, competitions, and interesting problems worth building for.</p>
-            <div class="contact">
-                <a target="_blank" href="https://github.com/haidar17-dev" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a target="_blank" href="https://instagram.com/bunghaidrr" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/adeel-haidar-setiabudi-1b8450419/" aria-label="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
-                <a target="_blank" href="https://youtube.com/@haidrr.17" aria-label="Instagram"><i class="fa-brands fa-youtube"></i></a>
-                <a target="_blank" href="mailto:haidarsetiabudi17@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-            <footer>Designed &amp; built by Adeel Haidar Setiabudi</footer>
-        </div>
-    </section>
+            <a class="mail" href="mailto:haidarsetiabudi17@gmail.com"><i class="fa-solid fa-envelope"></i>&nbsp; Get In Touch!</a>
+            <ul class="links">
+                <li><a target="_blank" rel="noopener" href="https://github.com/haidar17-dev"><i class="fa-brands fa-github"></i></a></li>
+                <li><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/adeel-haidar-setiabudi-1b8450419/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a target="_blank" rel="noopener" href="https://instagram.com/bunghaidrr"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>Designed &amp; built by Adeel Haidar Setiabudi</footer>
 
     <script src="script.js"></script>
 </body>
